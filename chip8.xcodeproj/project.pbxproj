@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		07A0BBA01ADCB018000FA927 /* chip8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A0BB9E1ADCB018000FA927 /* chip8.cpp */; };
-		07A0BBA21ADCB6C0000FA927 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0BBA11ADCB6C0000FA927 /* GLUT.framework */; };
-		07A0BBA41ADCB72C000FA927 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0BBA31ADCB72C000FA927 /* OpenGL.framework */; };
-		07A0BBC51ADDA46F000FA927 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A0BB971ADC8549000FA927 /* main.cpp */; };
+		07A0BBCB1ADDAA30000FA927 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0BBCA1ADDAA30000FA927 /* OpenGL.framework */; };
+		07A0BBCC1ADDAAC5000FA927 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A0BB971ADC8549000FA927 /* main.cpp */; };
+		07A0BBCE1ADDAB07000FA927 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0BBCD1ADDAB07000FA927 /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,9 +30,10 @@
 		07A0BB971ADC8549000FA927 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		07A0BB9E1ADCB018000FA927 /* chip8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chip8.cpp; sourceTree = "<group>"; };
 		07A0BB9F1ADCB018000FA927 /* chip8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chip8.h; sourceTree = "<group>"; };
-		07A0BBA11ADCB6C0000FA927 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-		07A0BBA31ADCB72C000FA927 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		07A0BBA51ADCBD6A000FA927 /* PONG */ = {isa = PBXFileReference; lastKnownFileType = file; path = PONG; sourceTree = "<group>"; };
+		07A0BBC81ADDA9D7000FA927 /* main2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main2.cpp; path = "../../../../Downloads/myChip8-bin-src/sourcecode/main2.cpp"; sourceTree = "<group>"; };
+		07A0BBCA1ADDAA30000FA927 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		07A0BBCD1ADDAB07000FA927 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,8 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A0BBA41ADCB72C000FA927 /* OpenGL.framework in Frameworks */,
-				07A0BBA21ADCB6C0000FA927 /* GLUT.framework in Frameworks */,
+				07A0BBCE1ADDAB07000FA927 /* GLUT.framework in Frameworks */,
+				07A0BBCB1ADDAA30000FA927 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +52,8 @@
 		07A0BB8B1ADC8549000FA927 = {
 			isa = PBXGroup;
 			children = (
-				07A0BBA31ADCB72C000FA927 /* OpenGL.framework */,
-				07A0BBA11ADCB6C0000FA927 /* GLUT.framework */,
+				07A0BBCD1ADDAB07000FA927 /* GLUT.framework */,
+				07A0BBCA1ADDAA30000FA927 /* OpenGL.framework */,
 				07A0BB961ADC8549000FA927 /* chip8 */,
 				07A0BB951ADC8549000FA927 /* Products */,
 			);
@@ -70,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				07A0BBA51ADCBD6A000FA927 /* PONG */,
+				07A0BBC81ADDA9D7000FA927 /* main2.cpp */,
 				07A0BB971ADC8549000FA927 /* main.cpp */,
 				07A0BB9E1ADCB018000FA927 /* chip8.cpp */,
 				07A0BB9F1ADCB018000FA927 /* chip8.h */,
@@ -133,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A0BBC51ADDA46F000FA927 /* main.cpp in Sources */,
+				07A0BBCC1ADDAAC5000FA927 /* main.cpp in Sources */,
 				07A0BBA01ADCB018000FA927 /* chip8.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +220,10 @@
 		07A0BB9C1ADC8549000FA927 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -225,6 +231,10 @@
 		07A0BB9D1ADC8549000FA927 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

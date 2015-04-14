@@ -16,10 +16,12 @@ public:
     void emu();
     void debugRender();
     bool loadApplication(const char * filename);
+    void init();
+
     
     // Chip8
-    unsigned char  gfx[64 * 32];	// Total amount of pixels: 2048
-    unsigned char  key[16];
+    unsigned char  display[64 * 32];	// Total amount of pixels: 2048
+    unsigned char  keys[16];
     
 private:
     unsigned short pc;				// Program counter
@@ -31,8 +33,7 @@ private:
     unsigned short stack[16];		// Stack (16 levels)
     unsigned char  memory[4096];	// Memory (size = 4k)
 				
-    unsigned char  delay_timer;		// Delay timer
-    unsigned char  sound_timer;		// Sound timer
+    unsigned char  dt;		// Delay timer
+    unsigned char  st;		// Sound timer
     
-    void init();
 };

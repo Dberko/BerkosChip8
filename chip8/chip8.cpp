@@ -65,14 +65,14 @@ void chip8::init() {
     
     // Clear display
     for(int i = 0; i < 2048; ++i)
-        gfx[i] = 0;
+        display[i] = 0;
     
     // Clear stack
     for(int i = 0; i < 16; ++i)
         stack[i] = 0;
     
     for(int i = 0; i < 16; ++i)
-        key[i] = V[i] = 0;
+        keys[i] = V[i] = 0;
     
     // Clear memory
     for(int i = 0; i < 4096; ++i)
@@ -101,7 +101,7 @@ void chip8::emu() {
         {
             case 0x0000: // 0x00E0: Clears the screen
                 for(int i = 0; i < 2048; ++i)
-                    gfx[i] = 0x0;
+                    display[i] = 0x0;
                 drawFlag = true;
                 pc += 2;
                 break;
@@ -265,11 +265,11 @@ void chip8::emu() {
                 {
                     if((pixel & (0x80 >> xline)) != 0)
                     {
-                        if(gfx[(x + xline + ((y + yline) * 64))] == 1)
+                        if(display[(x + xline + ((y + yline) * 64))] == 1)
                         {
                             V[0xF] = 1;
                         }
-                        gfx[x + xline + ((y + yline) * 64)] ^= 1;
+                        display[x + xline + ((y + yline) * 64)] ^= 1;
                     }
                 }
             }
@@ -283,14 +283,14 @@ void chip8::emu() {
             switch(opcode & 0x00FF)
         {
             case 0x009E: // EX9E: Skips the next instruction if the key stored in VX is pressed
-                if(key[V[(opcode & 0x0F00) >> 8]] != 0)
+                if(keys[V[(opcode & 0x0F00) >> 8]] != 0)
                     pc += 4;
                 else
                     pc += 2;
                 break;
                 
             case 0x00A1: // EXA1: Skips the next instruction if the key stored in VX isn't pressed
-                if(key[V[(opcode & 0x0F00) >> 8]] == 0)
+                if(keys[V[(opcode & 0x0F00) >> 8]] == 0)
                     pc += 4;
                 else
                     pc += 2;
@@ -305,7 +305,7 @@ void chip8::emu() {
             switch(opcode & 0x00FF)
         {
             case 0x0007: // FX07: Sets VX to the value of the delay timer
-                V[(opcode & 0x0F00) >> 8] = delay_timer;
+                V[(opcode & 0x0F00) >> 8] = dt;
                 pc += 2;
                 break;
                 
@@ -315,7 +315,7 @@ void chip8::emu() {
                 
                 for(int i = 0; i < 16; ++i)
                 {
-                    if(key[i] != 0)
+                    if(keys[i] != 0)
                     {
                         V[(opcode & 0x0F00) >> 8] = i;
                         keyPress = true;
@@ -331,12 +331,12 @@ void chip8::emu() {
                 break;
                 
             case 0x0015: // FX15: Sets the delay timer to VX
-                delay_timer = V[(opcode & 0x0F00) >> 8];
+                dt = V[(opcode & 0x0F00) >> 8];
                 pc += 2;
                 break;
                 
             case 0x0018: // FX18: Sets the sound timer to VX
-                sound_timer = V[(opcode & 0x0F00) >> 8];
+                st = V[(opcode & 0x0F00) >> 8];
                 pc += 2;
                 break;
                 
@@ -396,7 +396,7 @@ void chip8::emu() {
     {
         if(dt == 1)
             printf("BEEP!\n");
-        --sound_timer;
+        --st;
     }
     
 }
