@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07A0BB981ADC8549000FA927 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A0BB971ADC8549000FA927 /* main.cpp */; };
 		07A0BBA01ADCB018000FA927 /* chip8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A0BB9E1ADCB018000FA927 /* chip8.cpp */; };
 		07A0BBA21ADCB6C0000FA927 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0BBA11ADCB6C0000FA927 /* GLUT.framework */; };
 		07A0BBA41ADCB72C000FA927 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0BBA31ADCB72C000FA927 /* OpenGL.framework */; };
+		07A0BBC51ADDA46F000FA927 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A0BB971ADC8549000FA927 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -133,8 +133,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A0BBC51ADDA46F000FA927 /* main.cpp in Sources */,
 				07A0BBA01ADCB018000FA927 /* chip8.cpp in Sources */,
-				07A0BB981ADC8549000FA927 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

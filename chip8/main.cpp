@@ -17,6 +17,7 @@
 
 chip8 skylark8;
 int modifier = 10;
+using namespace std;
 
 // Window size
 int display_width = SCREEN_WIDTH * modifier;
@@ -198,7 +199,7 @@ void keyboardDown(unsigned char key, int x, int y)
     else if(key == 'c')	skylark8.key[0xB] = 1;
     else if(key == 'v')	skylark8.key[0xF] = 1;
     
-    //printf("Press key %c\n", key);
+    printf("Press key %c\n", key);
 }
 
 void keyboardUp(unsigned char key, int x, int y)

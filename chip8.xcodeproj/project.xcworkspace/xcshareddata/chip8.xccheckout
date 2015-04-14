@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B10C9A39-3485-4C76-8AF9-A7D9026881F1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>chip8</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5518CF8E378020626391FC6CD6C3B21F9510454A</key>
+		<string>github.com:Dberko/BerkosChip8.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>chip8.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5518CF8E378020626391FC6CD6C3B21F9510454A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Dberko/BerkosChip8.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5518CF8E378020626391FC6CD6C3B21F9510454A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5518CF8E378020626391FC6CD6C3B21F9510454A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>chip8</string>
+		</dict>
+	</array>
+</dict>
+</plist>

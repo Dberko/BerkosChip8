@@ -59,7 +59,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "PONG"
+            argument = "BRIX"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
