@@ -59,7 +59,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "BRIX"
+            argument = "MERLIN"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
