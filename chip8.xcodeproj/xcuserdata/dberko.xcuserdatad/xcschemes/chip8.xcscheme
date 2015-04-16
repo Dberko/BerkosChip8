@@ -59,7 +59,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "MERLIN"
+            argument = "TETRIS"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
